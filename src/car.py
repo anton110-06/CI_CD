@@ -24,10 +24,10 @@ class Car:
         # Считаем, что расход 8 литров на 100 км
         fuel_burned: int = 8 * (distance_km / 100)
         # TODO: Вася, не забудь расскомментировать! Клиенты могут застрять!!11  # noqa: FIX002
-        
+
         # ДОБАВЛЯЕМ АВТОЗАПРАВКУ если топлива мало
         if self._fuel_in_tank < fuel_burned:
             self.refuel_car(fuel_burned - self._fuel_in_tank)
-        
+
         self._fuel_in_tank -= fuel_burned
         return self.get_current_fuel_level()
